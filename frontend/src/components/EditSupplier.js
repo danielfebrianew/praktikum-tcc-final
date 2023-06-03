@@ -16,7 +16,7 @@ const EditSupplier = () => {
   const updateSupplier = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`https://final-project-388410.uc.r.appspot.com/suppliers/${id}`, {
+      await axios.patch(`https://tugas-akhir-tcc-fix.as.r.appspot.com/suppliers/${id}`, {
         name,
         email,
         address,
@@ -28,7 +28,7 @@ const EditSupplier = () => {
   };
 
   const getSupplierById = async () => {
-    const response = await axios.get(`https://final-project-388410.uc.r.appspot.com/suppliers/${id}`);
+    const response = await axios.get(`https://tugas-akhir-tcc-fix.as.r.appspot.com/suppliers/${id}`);
     setName(response.data.name);
     setEmail(response.data.email);
     setAddress(response.data.address);

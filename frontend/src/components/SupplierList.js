@@ -11,13 +11,13 @@ const SupplierList = () => {
   }, []);
 
   const getSuppliers = async () => {
-    const response = await axios.get("https://final-project-388410.uc.r.appspot.com/suppliers");
+    const response = await axios.get("https://tugas-akhir-tcc-fix.as.r.appspot.com/suppliers");
     setSupplier(response.data);
   };
 
   const deleteSupplier = async (id) => {
     try {
-      await axios.delete(`https://final-project-388410.uc.r.appspot.com/suppliers/${id}`);
+      await axios.delete(`https://tugas-akhir-tcc-fix.as.r.appspot.com/suppliers/${id}`);
       getSuppliers();
     } catch (error) {
       console.log(error);
